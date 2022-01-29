@@ -1,0 +1,1 @@
+from .smapi import Client
