@@ -37,5 +37,5 @@ from smapi import Client
 
 
 client = Client(авторизация)
-me = client.get('users/me') # Получение пользователя токена
+me = client.get_me() # Получение пользователя токена
 ```
