@@ -11,7 +11,7 @@ def processing(func):
         try:
             return response.json()
         except:
-            return response.text
+            return response
     return wrapper
   
 
@@ -36,6 +36,12 @@ class APIBase:
     @processing
     def delete(self, method: str, v: str = 'v2.0/'):
         return self.session.delete(self.host + v + method)
+    
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.session.close()
 
 
 class Client(APIBase):

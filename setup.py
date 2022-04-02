@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
 	name="smapi",
-	version="1.0",
+	version="1.1",
 	url="https://github.com/pykpt/smapi",
 	author="pykpt",
 	packages=find_packages(),
